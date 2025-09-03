@@ -16,10 +16,10 @@ export async function apiClient<T>(
         cache: "no-store",
     });
 
-    if (!res.ok) {
-        const errText = await res.text();
-        throw new Error(`API error ${res.status}: ${errText}`);
-    }
+    // if (!res.ok) {
+    //     const errText = await res.text();
+    //     throw new Error(`API error ${res.status}: ${errText}`);
+    // }
 
     return res.json();
 }
